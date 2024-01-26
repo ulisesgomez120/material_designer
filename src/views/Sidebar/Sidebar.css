@@ -41,9 +41,26 @@
   cursor: pointer;
   border-bottom: 1px solid rgba(80, 80, 80, 0.7);
 }
+.sidebar-item__content {
+  flex-grow: 1;
+  padding: 1rem 0;
+}
 .sidebar-item__active_section {
   flex-basis: 10%;
   background-color: green;
   margin-right: 0.5rem;
   padding: 1rem;
+}
+.sidebar-item hr {
+  margin: 0.7rem 0;
+}
+.sidebar-item__action_btns {
+  /* display: flex; */
+  /* justify-content: space-between;
+  align-items: center; */
+  padding-top: 0.7rem;
+}
+.sidebar-item__icon {
+  margin-right: 0.8rem;
+  font-size: 1.3rem;
 }

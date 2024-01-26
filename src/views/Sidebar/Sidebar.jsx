@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 import SidebarItem from "./components/SidebarItem";
 
-const Sidebar = () => {
+const Sidebar = ({ materials }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+  // want to loop through the list of materials and create a sidebar item for each one
 
   return (
     <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
