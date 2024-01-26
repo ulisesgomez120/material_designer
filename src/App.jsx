@@ -2,10 +2,9 @@ import { useState } from "react";
 import "./App.css";
 import Sidebar from "./views/Sidebar/Sidebar";
 
-const materials = [
-  // materials should be objects with a name, and coord keys that
+const data = [
   {
-    id: 1,
+    id: 1001,
     name: "Pentane",
     coord: [
       "C      -0.06119     -0.14438     -0.09006",
@@ -29,10 +28,12 @@ const materials = [
   },
 ];
 function App() {
+  const [materials, setMaterials] = useState(data);
+  const [selectedMaterial, setSelectedMaterial] = useState(materials[0]);
   return (
     <>
       <h1>Material Viewer</h1>
-      <Sidebar />
+      <Sidebar materials={materials} selectMaterial={setSelectedMaterial} />
     </>
   );
 }

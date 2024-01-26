@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 import SidebarItem from "./components/SidebarItem";
 
-const Sidebar = ({ materials }) => {
+const Sidebar = ({ materials, selectMaterial }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
-  // want to loop through the list of materials and create a sidebar item for each one
-
   return (
     <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
-      <button className='toggle-button' onClick={toggleSidebar}>
-        {/* {isOpen ? "Close" : "Open"} */}
-      </button>
+      {/* button content comes from css toggle-button::before */}
+      <button className='toggle-button' onClick={toggleSidebar}></button>
       <div className='content'>
-        <SidebarItem item={{ title: "Title", content: "Content" }} />
+        {materials &&
+          materials.map((material) => (
+            <SidebarItem key={material.id} item={material} selectMaterial={selectMaterial} />
+          ))}
       </div>
     </div>
   );
