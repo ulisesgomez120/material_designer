@@ -1,0 +1,16 @@
+.file-viewer {
+  padding: 0.4rem 2.5rem;
+}
+
+.file-viewer__content {
+  padding-top: 1rem;
+}
+
+.file-viewer__line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.file-viewer__line * {
+  margin-right: 0.5rem;
+}

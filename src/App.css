@@ -3,3 +3,7 @@
   padding: 2rem;
   height: 100vh;
 }
+.material-info {
+  display: flex;
+  height: 100%;
+}
